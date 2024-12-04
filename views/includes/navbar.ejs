@@ -1,0 +1,169 @@
+<style>
+ /* General styles */
+/* General styles */
+.nav {
+  display: flex;
+  background-color: rgb(224, 218, 218);
+  width: 100%;
+  height: 12vh;
+  align-items: center;
+  padding: 0 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 1000;
+  /* margin-bottom: 200px; */
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#img1 {
+  display: flex;
+  align-items: center;
+}
+#img {
+  height: 7vh;
+  width: 3.5vw;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+h3 {
+  margin-top: 1rem;
+}
+.component a {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.component a:hover{
+  color: rgb(171, 118, 118);
+}
+.component a:active{
+  color: rgb(162, 96, 223);
+}
+
+/* Hamburger icon styles */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Body content */
+.content {
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  
+
+  .component {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(224, 218, 218);
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .menu-icon.open {
+  transform: rotate(45deg) translate(5px, 5px);
+  margin-left: 2rem;
+}
+
+
+.menu-icon.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  margin-left: 2rem;
+}
+  .component a {
+    margin: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .component.show {
+    display: flex;
+  }
+}
+
+@media ((min-width:0px) and (max-width: 480px)) {
+  h3 {
+    font-size: 1rem;
+
+  }
+  #img {
+    width: 5vw;
+    margin-left: -3rem;
+  }
+  .menu-icon.open {
+  transform: rotate(45deg) translate(5px, 5px);
+  margin-left: 2rem;
+}
+
+
+.menu-icon.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  margin-left: 2rem;
+}
+}
+
+
+</style>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <div id="img1">
+        <img id="img" src="\image\IMG-20211028-WA0007jpg.0.jpg" alt="this is not show" />
+        <h3>KESHAV KUMAR</h3>
+      </div>
+      <!-- Hamburger Menu Icon -->
+      <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+        &#9776;
+      </div>
+      <!-- Navigation Links -->
+      <div class="component" id="navLinks">
+        <a href="/">Home</a>
+        <a id="about" href="#content-area">About</a>
+        <a id="loadProjectBtn" href="#projects-section">Projects</a>
+        <a id="contactBtn" href="#contact-section">Contacts</a>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <script>
+    function toggleMenu() {
+  var navLinks = document.getElementById('navLinks');
+  var menuIcon = document.getElementById('menuIcon');
+
+  // Toggle the "show" class for the menu
+  navLinks.classList.toggle('show');
+
+  // Toggle the "open" class for the menu icon (hamburger to cross)
+  menuIcon.classList.toggle('open');
+}
+
+
+
+
+  </script>
+</body>
+</html>
+

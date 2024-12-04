@@ -1,0 +1,107 @@
+<style>
+  .body {
+    display: flex;
+    /* justify-content: 
+    /* align-items: */
+    height: 100vh;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+    background-color: rgb(243, 242, 240);
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+  }
+  .text {
+    text-align: center;
+  }
+  .f2{
+    width: 90%;
+  }
+  .f4{
+    width: 70%;
+  }
+  .f{
+    height: 3rem;
+  }
+  @media ((min-width:100px) and (max-width: 720px)){
+    .f4{
+      padding: 0px;
+      margin: 0px;
+      width: 100%;
+    }
+    .f2{
+      width: 100%;
+    }
+    /* .btn{
+       margin-left: 0px;
+    } */
+    
+  }
+  /* .btn{
+    margin-left: 80%;
+  } */
+  .f2{
+    border: 1 px solid rgb(210, 199, 199);
+    border-radius: 2rem;
+    box-shadow: 5px -2px 26px rgb(211, 210, 208);
+  }
+</style>
+
+<div class="container mb-5">
+  <div class="row m-auto">
+    <div class="col-lg-12 text-center">
+      <h1 class="text">Contact</h1>
+      <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
+      <hr class="hr mb-5">
+    </div>
+  </div>
+  </div>
+
+  <div class="container mt-3">
+
+  <div class="row  f4 p-3 m-auto">
+    <div class="f2 p-5  col-lg-12">
+      <form action="/contact" method="POST" class="needs-validation" novalidate>
+        <div class="f3 mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Email address</label
+          >
+          <input 
+            type="email"
+            class=" f form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+            required
+            name="email"
+          />
+        </div>
+        <div class=" f3 mb-3">
+        <label for="username" class=" form-label"
+        >username</label
+      >
+      <input
+        type="text"
+        class=" f form-control"
+        id="username"
+        placeholder="Enter User Name"
+        name="username"
+        required
+      />
+    </div>
+        <div class=" f3 mb-5">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Write Your Queris</label
+          >
+          <textarea style="height: 8rem;"
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            name="textarea"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" style="width: 8rem; height: 3rem; font-weight: bold;" class=" btn btn-primary mt-3">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,186 @@
+<%- layout("layouts/boilerPlate") %>
+<body>
+  <div
+    class="container-fluid d-flex justify-content-center align-items-center vh-100 mb-5"
+  >
+    <div class="text-center">
+      <div class="head">
+        <h1>HEY, I'M KESHAV KUMAR</h1>
+        <p>
+          I'M a final-year B.Tech student at Suresh Gyan Vihar University,
+          Jaipur, pursuing Computer Science Engineering. I have a strong focus
+          on full-stack web development, particularly with the MERN stack
+          (MongoDB, Express.js, React, Node.js), and enjoy building dynamic,
+          real-world applications.
+        </p>
+        <!-- <form action="/project" method="GET" id="projectForm">
+              <button type="submit" class="btn btn-primary mt-5 mb-5" id="loadProjectBtn">Projects</button>
+           </form> -->
+        <a
+          href="#projects-section"
+          class="btn btn-primary p-3 mt-5 mb-5"
+          id="loadProjectBtn"
+          >Projects</a
+        >
+
+        <div id="content-area"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container justify-content-center align-items-center mt-5 mb-5">
+    <div class="text-center">
+      <h1 class="mb-4">About Me</h1>
+      <hr class="hr" />
+      <p class="mb-5">
+        Here you will find more information about me, what I do, and my current
+        skills mostly in terms of programming and technology
+      </p>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Get to Know Me Section -->
+      <div class="col-lg-6 col-md-12 p-3">
+        <h3 style="font-weight: 700; text-align: center; margin-bottom: 2rem">
+          Get to know me!
+        </h3>
+        <div class="aboutMe m-3">
+          <p>
+            I'm a Full-Stack Web Developer focused on building and managing both
+            the front-end and back-end of web applications, ensuring a smooth
+            and cohesive user experience. I specialize in the MERN stack
+            (MongoDB, Express.js, React, Node.js), creating dynamic and
+            efficient web solutions that drive product success. Check out some
+            of my work in the Projects section.
+          </p>
+          <p>
+            I have strong knowledge of Java with a deep understanding of
+            <b>Data Structures</b> and <b>Algorithms</b> (DSA) and
+            <b> Object-Oriented Programming </b>(OOP) concepts.
+          </p>
+          <p>
+            I’m passionate about sharing my knowledge with the developer
+            community. I also enjoy sharing content related to the things I’ve
+            learned in <b>Web Development</b> to help others in the Dev
+            Community.Feel free to Connect or Follow me on my
+            <a
+              style="text-decoration: none"
+              href="https://www.linkedin.com/in/keshavsingh9934/"
+            >
+              Linkedin</a
+            >
+            and
+            <a
+              style="text-decoration: none"
+              href="https://www.instagram.com/_keshav870/profilecard/?igsh=MXVxbzVjeWhhaWRrdA=="
+              >Instagram</a
+            >
+            where I post useful content related to Web Development and
+            Programming
+          </p>
+          <p>
+            I'm open to Job opportunities where I can contribute, learn and
+            grow. If you have a good opportunity that matches my skills and
+            experience then don't hesitate to contact me.
+          </p>
+        </div>
+      </div>
+
+      <!-- My Skills Section -->
+      <div class="col-lg-6 col-md-12 p-3">
+        <h3 style="font-weight: 700; text-align: center; margin-bottom: 3rem">
+          My Skills
+        </h3>
+        <div class="container me-1">
+          <div class="row">
+            <div class="skill col-sm-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img src="\image\HTML5_logo_and_wordmark.svg.png" alt="" />
+            </div>
+            <div class="skill col-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img src="\image\github_PNG40.png" alt="" />
+            </div>
+            <div class="skill col-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img src="\image\JavaScript-Emblem.png" alt="" />
+            </div>
+            <div class="skill col-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img
+                id="dsa"
+                src="\image\Learn-DSA-with-Java-Image.webp"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="skill col-sm-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img src="\image\react7473.logowik.com.webp" alt="" />
+            </div>
+            <div class="skill col-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img src="\image\th (1).jpg" alt="" />
+            </div>
+            <div class="skill col-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img src="\image\th (2).jpg" alt="" />
+            </div>
+            <div class="skill col-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img id="dsa" src="\image\th (3).jpg" alt="" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="skill col-sm-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img src="\image\th (4).jpg" alt="" />
+            </div>
+            <div class="skill col-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img src="\image\th (5).jpg" alt="" />
+            </div>
+            <div class="skill col-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img src="\image\th.jpg" alt="" />
+            </div>
+            <div class="skill col-4 col-sm-1 col-md-2 col-lg-3 mb-4">
+              <img id="dsa" src="\image\zojuy79lo3fn3qdt7g6p.webp" alt="" />
+            </div>
+            <p id="projects-section"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <button
+      type="button"
+      style="width: 8rem; height: 3rem"
+      class="btn btn-primary mb-5"
+    >
+      Contact
+    </button> -->
+    <a 
+    style="width: 8rem; height: 3rem;"
+    href="#contact-section"
+    class="btn btn-primary p-2 mb-5"
+    id="contactBtn"
+    >Contact</a
+  >
+  </div>
+
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center mb-5">Projects</h1>
+        <hr style="width: 3rem; margin: auto" class="hr mb-5" />
+        <p class="text-center">
+          Here you will find some of the personal and clients projects that I
+          created with each project containing its own case study
+        </p>
+      </div>
+    </div>
+
+  <%- include('../projects/projects.ejs') %>
+
+  <!-- <script>
+    document
+      .getElementById("loadProjectBtn")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        const projectSection = document.getElementById("projects-section");
+        projectSection.scrollIntoView({ behavior: "smooth" });
+      });
+  </script> -->
+</body>
+<!-- d-flex justify-content-center align-items-center vh-100 -->

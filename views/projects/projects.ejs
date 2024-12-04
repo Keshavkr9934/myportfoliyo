@@ -1,0 +1,90 @@
+<style>
+    .laptop_fram {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .laptop-screen{
+        width: 100%;
+        border-radius: 10px 10px 6px 6px; /* Rounded top corners */
+        border: 4px solid black;
+        /* border-bottom: none; */
+        position: relative;
+        border-top: 15px solid rgb(46, 43, 43);
+        box-shadow: 3px 4px 4px rgba(29, 27, 27, 0.5);
+    }
+    .description {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+    }
+</style>
+<body>
+  <div class="container">
+    <div class="row p-4 mb-5">
+      <div class="col-lg-6">
+        <div class="laptop_fram">
+            <img src="\image\Screenshot 2024-10-20 165831.png" class="laptop-screen" alt="this is image">
+        </div>
+        <div class="laptop-bottom"></div>
+      </div>
+      <div class="col-lg-6 p-3">
+
+        <div class="description mb-4">
+            <p class="mb3">Airbnb Clone is a full-stack web application built to mimic the core features of the Airbnb platform, enabling users to explore, book, 
+                and list properties for rent. The project is designed to provide a 
+                seamless user experience with features like real-time booking, property filtering, and user authentication</p>
+                <form action="/project1" method="GET">
+                  <button type="submit" style="width: 8rem; height: 3rem; font-weight: bold;" class=" btn btn-primary mt-3">Case Study</button>
+                </form>
+        </div>
+      </div>
+    </div>
+    <div class="row p-4 mb-5">
+      <div class="col-lg-6">
+        <div class="laptop_fram">
+            <img src="\image\Screenshot 2024-10-20 225427.png" class="laptop-screen" alt="this is image">
+        </div>
+        <div class="laptop-bottom"></div>
+      </div>
+      <div class="col-lg-6 p-3">
+
+        <div class="description mb-4">
+            <p class="mb3">Zerodha Clone is a full-stack web application developed to replicate the key functionalities of 
+              the Zerodha trading platform. It includes features like real-time stock data, user authentication, a simulated trading 
+              dashboard, and an intuitive interface for buying and selling stocks. This project aims to provide a user-friendly environment
+               for managing stock portfolios and tracking market trends</p>
+                <form action="/project3" method="get">
+                  <button type="submit" style="width: 8rem; height: 3rem; font-weight: bold;" class=" btn btn-primary mt-3">Case Study</button>
+                </form>
+        </div>
+      </div>
+    </div>
+    <div class="row p-4 mb-5">
+      <div class="col-lg-6">
+        <div class="laptop_fram">
+            <img src="\image\Screenshot 2024-10-20 230900.png" class="laptop-screen" alt="this is image">
+        </div>
+        <div class="laptop-bottom"></div>
+      </div>
+      <div class="col-lg-6 p-3">
+
+        <div class="description mb-4">
+            <p class="mb3">Zoom Clone is a video conferencing web application that replicates the core functionalities of Zoom. 
+              Built using WebRTC and Socket.io, it supports real-time video meetings, screen sharing, and chat features. 
+              The project focuses on seamless communication, allowing multiple participants to join and interact in a virtual meeting
+               room with smooth video and audio streaming.</p>
+                <form action="/project2"  method="GET">
+                  <button type="submit" style="width: 8rem; height: 3rem; font-weight: bold;" class=" btn btn-primary mt-3">Case Study</button>
+                </form>
+                <p id="contact-section"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include("../projects/contact.ejs") %>
+
+</body>
