@@ -7,7 +7,7 @@ const path = require("path");
 engine = require("ejs-mate");
 const mongoose = require("mongoose");
 const cotact = require("./schemas/contactSchema");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const twilio = require("twilio");
 
 main()
@@ -18,7 +18,7 @@ main()
 
 async function main() {
   await mongoose.connect(
-    "mongodb+srv://keshavkr9934:WYHVqnKEcJ8nq4VS@keshavportfoliyo.mktxg.mongodb.net/?retryWrites=true&w=majority&appName=keshavportFoliyo",
+    process.env.MONGOOSE,
     {
       // useNewUrlParser: true,
       // useUnifiedTopology: true,
@@ -55,8 +55,9 @@ app.get("/", (req, res) => {
   res.render("normalPage/home.ejs");
 });
 
-const accountSid = "ACf474350b30989499cdf60f12b581b1e4";
-const authToken = "0dfe9912cc4aa6dbcaa622162410f252";
+const accountSid = process.env.ACCOUNTSID;
+// console.log(accountSid);
+const authToken = process.env.AUTHTOKEN;
 const client = new twilio(accountSid, authToken);
 
 app.post("/contact", validateForm, async (req, res) => {
@@ -71,12 +72,14 @@ app.post("/contact", validateForm, async (req, res) => {
     await data.save();
     const message = `New Contact Form Submission:\nName: ${username}\nEmail: ${email}\nQuery: ${textarea}`;
     try {
+      
       await client.messages.create({
         body: message,
-        from: "<+17754296186>",
-        to: "<+918709569752>",
+        from: process.env.FROM,
+        to: process.env.TO,
       });
-    } catch (error) {
+    
+   } catch (error) {
       console.error("Error sending SMS:", error);
       res.status(500).send("Error sending message");
     }
